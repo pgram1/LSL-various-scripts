@@ -10,6 +10,9 @@ default {
         if (change & (CHANGED_OWNER | CHANGED_INVENTORY)) llResetScript();
     }
     state_entry() {
+        vector COLOR_GREEN = < 0.0, 1.0, 0.0 > ;
+        float OPAQUE = 1.0;
+        llSetText(llGetObjectDesc(), COLOR_GREEN, OPAQUE);
         llSetPayPrice(PAY_HIDE, [PAY_HIDE, PAY_HIDE, PAY_HIDE, PAY_HIDE]);
         llRequestPermissions(llGetOwner(), PERMISSION_DEBIT);
         llSetClickAction(CLICK_ACTION_PAY);
