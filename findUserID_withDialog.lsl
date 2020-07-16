@@ -32,7 +32,7 @@ default {
     dataserver(key queryid, string data) {
         if (wowQuery == queryid) {
             //dialog
-            llDialog(llGetOwner(), data, ["Done"], channel);
+            llDialog(llDetectedKey(0), data, ["Done"], channel);
         }
     }
     //exiting script
